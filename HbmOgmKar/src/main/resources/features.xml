@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.0.0 http://karaf.apache.org/xmlns/features/v1.0.0">
+
+  
+	<repository>mvn:org.hibernate/hibernate-osgi/5.2.9.Final/xml/karaf</repository>
+	<repository>mvn:org.apache.aries.jpa/jpa-features/2.6.1/xml/features</repository>
+
+	<feature name="HbmOgmProj" description="HBM OGM project "
+		version="0.0.1-SNAPSHOT" resolver="(obr)">
+		
+		<details>${project.description}</details>
+		<feature>http</feature>
+		<feature>transaction</feature>
+		<feature>jpa</feature>
+		<feature>hibernate</feature>
+		<bundle>mvn:HbmOgmProj/HbmOgmDb/0.0.1-SNAPSHOT</bundle>
+	</feature>
+
+</features>
